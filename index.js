@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits, MessageFlags, MembershipScreeningFieldType } = require("discord.js");
+const { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 
 const client = new Client({
     intents: [
@@ -40,4 +40,25 @@ client.on("messageCreate", message => {
 
          )}});
 
+
+         
+         client.on('messageCreate', message => {
+            if(message.author.bot) return;
+        
+            if(message.content === "sendbutton") {
+        
+        const row = new ActionRowBuilder().setComponents(
+            new ButtonBuilder()
+                .setCustomId('buttonCreateTicket')
+                .setLabel("Open Tickets")
+                .setStyle(ButtonStyle.Danger)
+                .setEmoji('👀')
+        );
+            message.reply({content : "Create Ticket avec this button", components: [row]});
+    };
+});
+
+// Client.on("interactionCreate", interaction => {
+
+// });
 
