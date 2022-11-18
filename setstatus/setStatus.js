@@ -15,7 +15,7 @@ client.login(token);
 setStatus();
 
 function setStatus() {
-    const botActivities = ["Thomas le bg ultime", "Adam & Aiyana ❤"];
+    const botActivities = ["Thomas le bg ultime", "Adam & Aiyana ❤", "Lao le pitbull 🐶"];
 
     client.on('ready', () => [
         setInterval(async () => {
