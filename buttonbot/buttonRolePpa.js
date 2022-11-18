@@ -1,5 +1,7 @@
 const { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 
+const token = require("../tokenclient/token.js")
+
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -8,7 +10,7 @@ const client = new Client({
     ]
 });
 
-client.login("MTA0MjQxNjcxMTIwNDMzOTczMw.GIqAuB.rNNtcgYPLrO2PcopaBBfrX1rk4jlxEunCB0gqs");
+client.login(token);
 
 
 buttonRolePpa();
@@ -23,13 +25,13 @@ function buttonRolePpa() {
                         .setCustomId('PPA')
                         .setLabel("Evalution Psychotechnique")
                         .setStyle(ButtonStyle.Danger)
-                        .setEmoji('🔫'),
-                        
+                        .setEmoji('🧠'),
+
                     new ButtonBuilder()
                         .setCustomId('CMAP')
                         .setLabel("Certificat médical")
                         .setStyle(ButtonStyle.Success)
-                        .setEmoji('🤼')
+                        .setEmoji('💪')
                 )
             ]
     });

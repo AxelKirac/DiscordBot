@@ -1,5 +1,7 @@
 const { Client, GatewayIntentBits, MessageFlags, MembershipScreeningFieldType } = require("discord.js");
 
+const token = require("../tokenclient/token");
+
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -8,7 +10,7 @@ const client = new Client({
     ]
 });
 
-client.login("MTA0MjQxNjcxMTIwNDMzOTczMw.GIqAuB.rNNtcgYPLrO2PcopaBBfrX1rk4jlxEunCB0gqs");
+client.login(token);
 
 recrutement()
 function recrutement() {
