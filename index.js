@@ -27,6 +27,15 @@ const troll = require('./messagebot/troll.js');
 //Button Test
 const buttonTest = require('./buttonbot/buttonTest.js')
 
+//Button Role PPA/CMAP /!\ Retirer le mode commentaire que pour envoyé le rôle
+// const buttonRolePpa = require('./buttonbot/buttonRolePpa.js')
+// buttonRolePpa.buttonRolePpa
+
+const handleButtonRolePpa = require('./buttonbot/buttonRolePpa.js')
+handleButtonRolePpa.handleButtonRolePpa;
+
+
+
 client.on("messageCreate", message => {
     if(message.author.bot) return;
     //Message
