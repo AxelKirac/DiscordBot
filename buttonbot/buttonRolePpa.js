@@ -75,7 +75,7 @@ function handleButtonRolePpa() {
                 .catch((err) => {
                     console.log(err);
                     interaction.reply({
-                        content: `Une erreur s'est produite. Le rôle ${role} ne peut pas vous être ajouté ${member}.`,
+                        content: `Une erreur s'est produite. Le rôle ${role} ne peut pas vous être ajouté.`,
                         ephemeral: true,
                     });
                 });
