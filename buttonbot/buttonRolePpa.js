@@ -23,9 +23,8 @@ function buttonRolePpa() {
                         .setCustomId('PPA')
                         .setLabel("Evalution Psychotechnique")
                         .setStyle(ButtonStyle.Danger)
-                        .setEmoji('🔫')
-                ),
-                new ActionRowBuilder().setComponents(
+                        .setEmoji('🔫'),
+                        
                     new ButtonBuilder()
                         .setCustomId('CMAP')
                         .setLabel("Certificat médical")
