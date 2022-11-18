@@ -24,14 +24,19 @@ const recrutement = require('./messagebot/recrutement.js');
 const dir = require('./messagebot/dir.js');
 //Les trolls de Thomas
 const troll = require('./messagebot/troll.js');
+//Button Test
+const buttonTest = require('./buttonbot/buttonTest.js')
 
 client.on("messageCreate", message => {
     if(message.author.bot) return;
+    //Message
     dispo.dispo
     unite.unite
     recrutement.recrutement
     dir.dir
     troll.troll
+    //Button
+    buttonTest.buttonTest
 
     //cmdana
      if(message.content === "!cmdana"){
@@ -42,21 +47,7 @@ client.on("messageCreate", message => {
 
 
          
-         client.on('messageCreate', message => {
-            if(message.author.bot) return;
-        
-            if(message.content === "sendbutton") {
-        
-        const row = new ActionRowBuilder().setComponents(
-            new ButtonBuilder()
-                .setCustomId('buttonCreateTicket')
-                .setLabel("Open Tickets")
-                .setStyle(ButtonStyle.Danger)
-                .setEmoji('👀')
-        );
-            message.reply({content : "Create Ticket avec this button", components: [row]});
-    };
-});
+
 
 // Client.on("interactionCreate", interaction => {
 
