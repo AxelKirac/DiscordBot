@@ -1,5 +1,5 @@
-const { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-const token = require("./tokenclient/token.js")
+const { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, ActivityType, Status } = require("discord.js");
+const token = require("./tokenclient/token.js");
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -12,6 +12,10 @@ client.on("ready", () => {
     console.log("C'est bon j'suis démarré fils de pute");
 });
 
+
+//---------------------------Import des fichiers---------------------------------------
+//Statut du bot
+const setStatus = require('./setstatus/setStatus.js')
 //Disponibilité Haut-Gradés
 const dispo = require("./messagebot/dispo.js");
 //Tout ce qui est relié au unités
@@ -31,6 +35,10 @@ const buttonRolePpa = require('./buttonbot/buttonRolePpa.js')
 //Handle des buttons
 const handleButtonRolePpa = require('./buttonbot/buttonRolePpa.js')
 
+//--------------------------------Set Statut-----------------------------------------
+
+//Status
+setStatus.setStatus
 
 //Message
 dispo.dispo
@@ -54,3 +62,4 @@ handleButtonRolePpa.handleButtonRolePpa
 
          )}});
 
+    
