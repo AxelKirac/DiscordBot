@@ -1,7 +1,5 @@
 const { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-
 const token = require("./tokenclient/token.js")
-
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -9,10 +7,7 @@ const client = new Client({
         GatewayIntentBits.MessageContent
     ]
 });
-
-
 client.login(token);
-
 client.on("ready", () => {
     console.log("C'est bon j'suis démarré fils de pute");
 });
@@ -35,8 +30,6 @@ const buttonRolePpa = require('./buttonbot/buttonRolePpa.js')
 
 //Handle des buttons
 const handleButtonRolePpa = require('./buttonbot/buttonRolePpa.js')
-
-
 
 
 //Message
