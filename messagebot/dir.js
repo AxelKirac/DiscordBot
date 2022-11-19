@@ -101,3 +101,10 @@ client.on("messageCreate", message => {
        module.exports = { dir }
        
     })};
+
+
+    //BLoupbloupalala
+     //BLoupbloupalala
+      //BLoupbloupalala
+       //BLoupbloupalala
+        //BLoupbloupalala
