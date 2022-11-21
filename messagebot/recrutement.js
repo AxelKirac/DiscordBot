@@ -19,7 +19,7 @@ function recrutement() {
 //!inaccessible
 if(message.content === "!inaccessible" && message.member.roles.cache.some(role => role.name === 'Haut-gradé' || 'Direction' || 'Responsable Ressources Humaines') )
 {
-    message.channel.send("Bonjour,\n\nVotre candidature n’est pas accessible. Il faut que vous partagiez le lien en lecteur :\n« **Partager** » (en haut à droite) :arrow_right: « **Remplacer par tous les utilisateurs disposant du lien** » (en bas de la fenêtre à gauche) :arrow_right: Bien mettre en **Lecteur** et **Copier le lien**.\nC’est ce lien qu’il faut nous envoyer.\n\nNous attendons votre candidature. \n\n**Bien à vous,\n**<@1010191277238784050>\n**Secrétaire du L.S.M.C.<:LSMC:915255404076883988> **",
+    message.channel.send("Bonjour,\n\nVotre candidature n’est pas accessible. Il faut que vous partagiez le lien en lecteur :\n« **Partager** » (en haut à droite) :arrow_right: « **Remplacer par tous les utilisateurs disposant du lien** » (en bas de la fenêtre à gauche) :arrow_right: Bien mettre en **Lecteur** et **Copier le lien**.\nC’est ce lien qu’il faut nous envoyer. <a:gyro:914592380739526737> \n\nNous attendons votre candidature. \n\n**Bien à vous,\n**<@1010191277238784050>\n**Secrétaire du L.S.M.C.<:LSMC:915255404076883988> **",
     message.delete("inaccessible")
     )
 }
