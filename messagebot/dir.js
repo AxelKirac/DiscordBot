@@ -101,3 +101,5 @@ client.on("messageCreate", message => {
        module.exports = { dir }
        
     })};
+
+    //Coucou pd
