@@ -30,7 +30,7 @@ const buttonTest = require('./buttonbot/buttonTest.js')
 const cmdAna = require('./messagebot/cmdana.js')
 
 //Button Role PPA/CMAP /!\ Retirer le mode commentaire que pour envoyé le rôle
-const buttonRolePpa = require('./buttonbot/buttonRolePpa.js')
+// const buttonRolePpa = require('./buttonbot/buttonRolePpa.js')
 
 //Handle des buttons
 const handleButtonRolePpa = require('./buttonbot/buttonRolePpa.js')
@@ -53,7 +53,7 @@ cmdAna.cmdAna
 
 //Button
 buttonTest.buttonTest
-buttonRolePpa.buttonRolePpa
+// buttonRolePpa.buttonRolePpa
 handleButtonRolePpa.handleButtonRolePpa
 
     
