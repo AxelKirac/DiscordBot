@@ -16,7 +16,7 @@ client.login(token);
 buttonRolePpa();
 function buttonRolePpa() {
     client.on('ready', async () => {
-        const channel = client.channels.cache.get('1010217082622857348');
+        const channel = client.channels.cache.get('914590722248806400');
         channel.send({
             content: "__Bonjour,__\n\n__**Ce canal vous permet de vous attribuer directement les grades <@&991454913605419069> ou <@&991455109764612126> en appuyant simplement sur le bon bouton ci-dessous.**__ :gyro:  \n\n Ceux qui ne **changent pas leurs pseudos** pour mettre Prénom & Nom RP*(Première règle du serveur je le rappelle : clic droit sur votre nom et \"Modifier le profil du serveur\")*, **n'obtiendrons jamais de rendez-vous !** :gyro: \n\n__Légendes des rendez-vous :__\n\n🧠 Évaluation**Psychotechniques** pour le P.P.A. | **10 000 $**  💵  *(+ 2000$ de frais de dossier pour un transfert vers un deuxième poste de police)*\n\n💪 **Certificat Médical d'Aptitude Physique** pour un recrutement LSPD/LSSD ou une licence Heaven | **5000 $**\nRégulièrement, nos médecins **proposeront** des créneaux de rendez-vous dans ce canal en taguant le grade en question. A vous de **réagir aux horaires où vous êtes disponibles !** La sélection est **aléatoire**. \n\nUne fois votre rendez-vous **terminé**, vous pouvez __**appuyer à nouveau sur le bouton**__, afin de vous **retirer le rôle**. <a:gyro:914592380739526737> \n\n*vidéo explicative : https://www.youtube.com/watch?v=TIDTCngopaE*\n\n**Bien à vous,**\n**<@1010191277238784050>** \n*** Secrétaire L.S.M.C. <:LSMC:915255404076883988>***",
             components: [
