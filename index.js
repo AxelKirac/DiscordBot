@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, ActivityType, Status } = require("discord.js");
+const { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, ActivityType, Status, SlashCommandBuilder } = require("discord.js");
 const token = require("./tokenclient/token.js");
 const client = new Client({
     intents: [
@@ -61,5 +61,8 @@ handleButtonRolePpa.handleButtonRolePpa
 
 //Ticket Direction
 createButtonDirection.createButtonDirection
+
+const slashCommands = require('./slashcommanddir/dispo.js')
+slashCommands;
 
     
