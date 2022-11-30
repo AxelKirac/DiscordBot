@@ -21,7 +21,7 @@ function setStatus() {
         setInterval(async () => {
             const randomStatus = botActivities[Math.floor(Math.random() * botActivities.length)];
             client.user.setPresence({ activities: [{ name: `${randomStatus}`, type: ActivityType.Watching }] });
-        }, 5000)
+        }, 15000)
     ]);
     module.exports = { setStatus };
 }
