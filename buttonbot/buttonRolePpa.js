@@ -43,8 +43,8 @@ handleButtonRolePpa();
 
 function handleButtonRolePpa() {
     const ROLES = {
-        PPA: '1043131912790749204',    //Ana Tomie > 991454913605419069    //Ana Thomas > 1043131912790749204
-        CMAP: '1043138176291704962'    //Ana Tomie > 991455109764612126    //Ana Thomas > 1043138176291704962
+        PPA: '991454913605419069',    //Ana Tomie > 991454913605419069    //Ana Thomas > 1043131912790749204
+        CMAP: '991455109764612126'    //Ana Tomie > 991455109764612126    //Ana Thomas > 1043138176291704962
     };
 
     client.on('interactionCreate', (interaction) => {
