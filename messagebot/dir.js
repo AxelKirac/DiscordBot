@@ -20,18 +20,18 @@ client.on("messageCreate", message => {
     if(message.author.bot) return;  
     const user = message.author;
     
-    //!attentedir
-    if(message.content === "!attentedir" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!attentedir" && message.member.roles.cache.some(role => role.name === 'Direction') )
-    {
-        message.channel.send("Bonjour,\n\nUn membre <@&774368900527423548> ou un <@&774369294876016710> répondra bientôt à votre demande. Merci de vous assurer d'avoir correctement rédigée celle-ci. **Les demandes liées à des réanimations** ou **des absences à des rendez-vous d'Evaluations Psychotechniques** ne seront pas prises en compte et **le ticket sera fermé**. \n\n**Bonne journée,**\n<@1010191277238784050>\n**Secrétaire du L.S.M.C.<:LSMC:915255404076883988> **",
-        message.delete("attentedir")
-        )
-    }
-   else if(message.content === "!attentedir" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!attentedir" && !message.member.roles.cache.some(role => role.name === 'Direction'))
-       {
-        return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-       message.delete("attentedir"))
-       };
+    // //!attentedir
+    // if(message.content === "!attentedir" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!attentedir" && message.member.roles.cache.some(role => role.name === 'Direction') )
+    // {
+    //     message.channel.send("Bonjour,\n\nUn membre <@&774368900527423548> ou un <@&774369294876016710> répondra bientôt à votre demande. Merci de vous assurer d'avoir correctement rédigée celle-ci. **Les demandes liées à des réanimations** ou **des absences à des rendez-vous d'Evaluations Psychotechniques** ne seront pas prises en compte et **le ticket sera fermé**. \n\n**Bonne journée,**\n<@1010191277238784050>\n**Secrétaire du L.S.M.C.<:LSMC:915255404076883988> **",
+    //     message.delete("attentedir")
+    //     )
+    // }
+//    else if(message.content === "!attentedir" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!attentedir" && !message.member.roles.cache.some(role => role.name === 'Direction'))
+//        {
+//         return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
+//        message.delete("attentedir"))
+//        };
 
     //!réponsedir
     if(message.content === "!réponsedir" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!réponsedir" && message.member.roles.cache.some(role => role.name === 'Direction') )
@@ -47,31 +47,31 @@ client.on("messageCreate", message => {
        };
 
 
-    //!sondagereu
-    if(message.content === "!sondagereu" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!sondagereu" && message.member.roles.cache.some(role => role.name === 'Direction') )
-    {
-        message.channel.send("Bonjour le <@&931616626686705674> !\n\nA quelle heure êtes-vous disponibles pour **la réunion de ce samedi** ? :alarm_clock:\n\nCelle-ci se déroulera en ville au **Cabinet de Psychologie du L.S.M.C.**, elle sera **rediffusée en direct sur Discord** pour les personnes absentes et un compte-rendu sera publié. <a:gyro:914592380739526737> \n\n:one: **18h00**\n:two: **20h00**\n:three: **21h00**\n:four: **22h00**\n\n:beach_umbrella: **Absent**\n\n**Bien à vous,**\n\n<@1010191277238784050>\n**Secrétaire du L.S.M.C.<:LSMC:915255404076883988> **",
-        message.delete("sondagereu")
-        )
-    }
-   else if(message.content === "!sondagereu" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!sondagereu" && !message.member.roles.cache.some(role => role.name === 'Direction'))
-       {
-        return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-       message.delete("sondagereu"))
-       };
+//     //!sondagereu
+//     if(message.content === "!sondagereu" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!sondagereu" && message.member.roles.cache.some(role => role.name === 'Direction') )
+//     {
+//         message.channel.send("Bonjour le <@&931616626686705674> !\n\nA quelle heure êtes-vous disponibles pour **la réunion de ce samedi** ? :alarm_clock:\n\nCelle-ci se déroulera en ville au **Cabinet de Psychologie du L.S.M.C.**, elle sera **rediffusée en direct sur Discord** pour les personnes absentes et un compte-rendu sera publié. <a:gyro:914592380739526737> \n\n:one: **18h00**\n:two: **20h00**\n:three: **21h00**\n:four: **22h00**\n\n:beach_umbrella: **Absent**\n\n**Bien à vous,**\n\n<@1010191277238784050>\n**Secrétaire du L.S.M.C.<:LSMC:915255404076883988> **",
+//         message.delete("sondagereu")
+//         )
+//     }
+//    else if(message.content === "!sondagereu" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!sondagereu" && !message.member.roles.cache.some(role => role.name === 'Direction'))
+//        {
+//         return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
+//        message.delete("sondagereu"))
+//        };
 
-           //!finticketdir
-    if(message.content === "!finticketdir" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!finticketdir" && message.member.roles.cache.some(role => role.name === 'Direction') )
-    {
-        message.channel.send("Bonjour, \n\nSi vous estimez que **la direction à répondu à toutes vos attentes ou questionnement**, nous vous laissons** clôturer le ticket**.\nPour cela, il suffit simplement de **cliquer sur le 🔒 en haut du ticket**, et de valider la fermeture de ce dernier en appuyant sur le bouton ***Close***.**\n\nEn cas d'une future réclamation ou questionnement, **nous répondrons à ces dernières avec plaisir**, à l'intérieur d'un ticket dans la catégorie <#800382264609341482> une nouvelle fois !\n\n**Bien à vous,**\n<@1010191277238784050>\n**Secrétaire du L.S.M.C. <:LSMC:915255404076883988>**",
-        message.delete("finticketdir")
-        )
-    }
-    else if(message.content === "!finticketdir" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!finticketdir" && !message.member.roles.cache.some(role => role.name === 'Direction'))
-       {
-        return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-       message.delete("finticketdir"))
-       };
+    //        //!finticketdir
+    // if(message.content === "!finticketdir" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!finticketdir" && message.member.roles.cache.some(role => role.name === 'Direction') )
+    // {
+    //     message.channel.send("Bonjour, \n\nSi vous estimez que **la direction à répondu à toutes vos attentes ou questionnement**, nous vous laissons** clôturer le ticket**.\nPour cela, il suffit simplement de **cliquer sur le 🔒 en haut du ticket**, et de valider la fermeture de ce dernier en appuyant sur le bouton ***Close***.**\n\nEn cas d'une future réclamation ou questionnement, **nous répondrons à ces dernières avec plaisir**, à l'intérieur d'un ticket dans la catégorie <#800382264609341482> une nouvelle fois !\n\n**Bien à vous,**\n<@1010191277238784050>\n**Secrétaire du L.S.M.C. <:LSMC:915255404076883988>**",
+    //     message.delete("finticketdir")
+    //     )
+    // }
+    // else if(message.content === "!finticketdir" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!finticketdir" && !message.member.roles.cache.some(role => role.name === 'Direction'))
+    //    {
+    //     return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
+    //    message.delete("finticketdir"))
+    //    };
             
         //!rdv
            if(message.content === "!rdv" && message.member.roles.cache.some(role => role.name === 'Direction'))
