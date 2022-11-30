@@ -11,7 +11,7 @@
 ####Pour Ana Tomie :
      { 
         "token": "MTAxMDE5MTI3NzIzODc4NDA1MA.G9p3hB.lwkuJdehOMORRqAVe4xgVEquKaOI4M3whZcv1U",
-        "clientId": "à définir",
+        "clientId": "1010191277238784050",
 	    "guildId": "735967288657838170"
     }
 
