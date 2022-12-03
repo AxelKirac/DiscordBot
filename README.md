@@ -21,4 +21,6 @@
 
 ###3 - Lancer avec nodejs 'index.js' pour démarrer par la suite le bot
 
+###4 - Vérifier les ids dans ButtonsRolePPA
+
 
