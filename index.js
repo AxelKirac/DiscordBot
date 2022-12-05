@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, ActivityType, Status, SlashCommandBuilder, Collection, Events } = require("discord.js");
-const token = require("./tokenclient/token.js");
+const config = require("./config.json")
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -9,26 +9,15 @@ const client = new Client({
         GatewayIntentBits.MessageContent
     ]
 });
-client.login(token);
+client.login(config.token);
 client.on("ready", () => {
     console.log("Bot is ready");
 });
 
 
 //---------------------------Import des fichiers---------------------------------------
-
-//Disponibilité Haut-Gradés
-const dispo = require("./messagebot/dispo.js");
-//Tout ce qui est relié au unités
-const unite = require("./messagebot/unite.js");
-//Tout ce qui est relié au recrutement
-const recrutement = require('./messagebot/recrutement.js');
-//Ce qui va touché à la direction
-const dir = require('./messagebot/dir.js');
 //Les trolls de Thomas
 const troll = require('./messagebot/troll.js');
-//Button Test
-const buttonTest = require('./buttonbot/buttonTest.js')
 const cmdAna = require('./messagebot/cmdana.js')
 
 //Button Role PPA/CMAP /!\ Retirer le mode commentaire que pour envoyé le rôle
@@ -49,15 +38,10 @@ const createButtonDirection = require('./directionTicket/ticket1.js')
 setStatus.setStatus
 
 //Message
-dispo.dispo
-unite.unite
-recrutement.recrutement
-dir.dir
 troll.troll
 cmdAna.cmdAna
 
 //Button
-buttonTest.buttonTest
 // buttonRolePpa.buttonRolePpa
 handleButtonRolePpa.handleButtonRolePpa
 

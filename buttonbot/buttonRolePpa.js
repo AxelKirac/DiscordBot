@@ -1,6 +1,6 @@
 const { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 
-const token = require("../tokenclient/token.js")
+const config = require("../config.json")
 
 const client = new Client({
     intents: [
@@ -10,7 +10,7 @@ const client = new Client({
     ]
 });
 
-client.login(token);
+client.login(config.token);
 
 
 // buttonRolePpa();
