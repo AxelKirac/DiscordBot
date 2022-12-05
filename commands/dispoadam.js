@@ -2,10 +2,21 @@ const { SlashCommandBuilder } = require("discord.js");
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('dispoadam')
-		.setDescription('Envoi une permanence pour Dr. Adam Itho'),
-	async execute(interaction) {
-		await interaction.reply("Hey !\nLe docteur <@248517566530584577> est actuellement **disponible** à l'hôpital !\n**N'hésitez pas à prendre contact avec lui pour toute demande ou réclamation !**\n\n https://cdn.discordapp.com/attachments/1004187230023204974/1008763965993668658/gif_adam_fini.gif");
+	.setName('permanencedirection')
+	.setDescription('Envoi une permanence pour un membre de la Direction')
+	.addStringOption(option =>
+		option.setName('permanencedir')
+		.setDescription('Affiche la permanence pour un membre de la Direction')
+		.setRequired(true)
+		.addChoices(
+			{ name: "Adam", value: "Hey !\nLe docteur <@248517566530584577> est actuellement disponible!\n https://i.imgur.com/tH2mHEL.mp4" },
+			{ name: "Thomas", value: "Hey !\nLe docteur <@536231631938387978> est actuellement disponible!\n https://i.imgur.com/R0ltMIA.mp4" },
+			{ name: "Lao", value: "Hey !\nLa docteur <@434461194292822017> est actuellement disponible!\n https://i.imgur.com/BP5nlkj.mp4" },
+			)),
+			async execute(interaction) {
+				const permanencedir = interaction.options.getString('permanencedir');
+		await interaction.reply(`${permanencedir}`);
 	}
 };
+	
 
