@@ -10,8 +10,8 @@ const client = new Client({
 
 module.exports = {
 	data: new SlashCommandBuilder()
-	.setName('permanencegops')
-	.setDescription('Envoi une permanence GOPS')
+	.setName('permanencecrèche')
+	.setDescription('Envoi une permanence de crèche')
 	.addStringOption(option =>
 			option.setName('début')
 			.setDescription('Indiqué quand la permanence commencera en respectant se schéma XXhXX')
