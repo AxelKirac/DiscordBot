@@ -5,7 +5,7 @@ module.exports = {
 	.setName('permanencedirection')
 	.setDescription('Envoi une permanence pour un membre de la Direction')
 	.addStringOption(option =>
-		option.setName('permanencedirection')
+		option.setName('nom')
 		.setDescription('Affiche la permanence pour quel directeur(ice) ?')
 		.setRequired(true)
 		.addChoices(

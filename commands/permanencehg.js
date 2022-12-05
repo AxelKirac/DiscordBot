@@ -5,8 +5,8 @@ module.exports = {
 	.setName('permanencehg')
 	.setDescription('Envoi une permanence pour un membre de la Direction')
 	.addStringOption(option =>
-		option.setName('permanencehg')
-		.setDescription('Affiche la permanence pour quel directeur(ice) ?')
+		option.setName('nom')
+		.setDescription('Affiche la permanence pour quel Haut-Gradé ?')
 		.setRequired(true)
 		.addChoices(
 			{ name: "Ritchy", value: "Hey !\nLe <@496663639349264415> est **disponible** à l'hôpital!\n https://i.imgur.com/STyE4qj.mp4" },
