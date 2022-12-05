@@ -20,11 +20,11 @@ client.on("ready", () => {
 const troll = require('./messagebot/troll.js');
 const cmdAna = require('./messagebot/cmdana.js')
 
-//Button Role PPA/CMAP /!\ Retirer le mode commentaire que pour envoyé le rôle
-// const buttonRolePpa = require('./buttonbot/buttonRolePpa.js')
+// Button Role PPA/CMAP /!\ Retirer le mode commentaire que pour envoyé le rôle
+// const cmapppa = require('./buttonbot/cmapppa.js')
 
 //Handle des buttons
-const handleButtonRolePpa = require('./buttonbot/buttonRolePpa.js')
+const handleCmapPpa = require('./buttonbot/cmapppa.js')
 
 //Statut du bot
 const setStatus = require('./setstatus/setStatus.js')
@@ -42,11 +42,13 @@ troll.troll
 cmdAna.cmdAna
 
 //Button
-// buttonRolePpa.buttonRolePpa
-handleButtonRolePpa.handleButtonRolePpa
+// cmapppa.cmapppa
+handleCmapPpa.handleCmapPpa
 
 //Ticket Direction
 createButtonDirection.createButtonDirection
+
+//--------------------------------SlashCommands Setup don't edit--------------------------------
 
 client.commands = new Collection();
 
@@ -81,3 +83,5 @@ client.on(Events.InteractionCreate, async interaction => {
 		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 	}
 });
+
+//---------------------------------------------------------------------------------
