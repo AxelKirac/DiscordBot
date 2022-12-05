@@ -23,16 +23,23 @@ module.exports = {
                 .setDescription('Indiqué quand la permanence se terminera en respectant se schéma XXhXX')
 				.setRequired(true)
 				.setMinLength(5)
-				.setMaxLength(5)),
+				.setMaxLength(5))
+				.addStringOption(option =>
+					option.setName('téléphone')
+						.setDescription('Indique ton numéro de téléphone')
+						.setRequired(true)
+						.setMinLength(3)
+						.setMaxLength(9)),
 				async execute(interaction) {
 					const responseStart = interaction.options.getString('début')
 					const responseEnd = interaction.options.getString('fin')
+					const numTel = interaction.options.getString('téléphone')
 					await interaction.reply(
 			{	allowedMentions: {role:['1006604363646644274']},
 				content : `Bonjour à tous et à toutes <@&1006604363646644274> !
 
 			Le docteur ${interaction.user} est actuellement disponible pour garder vos enfants à la garderie.
-			N'hésitez pas à prendre contact avec lui au 0523 par téléphone ou simple message !
+			N'hésitez pas à prendre contact avec au ${numTel} par téléphone ou simple message !
 			
 			**Disponible de : ${responseStart} à ${responseEnd}**
 			
