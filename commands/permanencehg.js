@@ -15,7 +15,7 @@ module.exports = {
 			{ name: "Kayla", value: "Hey !\nLa <@455801536413564940> est **disponible!** à l'hôpital\n https://i.imgur.com/Nv8pRcM.mp4" },
 			)),
 			async execute(interaction) {
-				const permanencehg = interaction.options.getString('permanencehg');
+				const permanencehg = interaction.options.getString('nom');
 		await interaction.reply(`${permanencehg}`);
 	}
 };

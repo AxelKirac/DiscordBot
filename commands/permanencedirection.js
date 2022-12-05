@@ -5,7 +5,7 @@ module.exports = {
 	.setName('permanencedirection')
 	.setDescription('Envoi une permanence pour un membre de la Direction')
 	.addStringOption(option =>
-		option.setName('nom')
+		option.setName('name')
 		.setDescription('Affiche la permanence pour quel directeur(ice) ?')
 		.setRequired(true)
 		.addChoices(
@@ -14,7 +14,7 @@ module.exports = {
 			{ name: "Lao", value: "Hey !\nLa <@434461194292822017> est **disponible!** à l'hôpital\n https://i.imgur.com/BP5nlkj.mp4" },
 			)),
 			async execute(interaction) {
-				const permanencedir = interaction.options.getString('permanencedirection');
+				const permanencedir = interaction.options.getString('name');
 		await interaction.reply(`${permanencedir}`);
 	}
 };
