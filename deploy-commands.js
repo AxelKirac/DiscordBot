@@ -32,3 +32,5 @@ const rest = new REST({ version: '10' }).setToken(token);
 		console.error(error);
 	}
 })();
+
+//-------------Delete Commands--------------------

@@ -1,6 +1,6 @@
-const { Client, GatewayIntentBits, MessageFlags, MembershipScreeningFieldType, ActivityType } = require("discord.js");
+const { Client, GatewayIntentBits, ActivityType } = require("discord.js");
 
-const token = require("../tokenclient/token");
+const config = require("../config.json");
 
 const client = new Client({
     intents: [
@@ -10,7 +10,7 @@ const client = new Client({
     ]
 });
 
-client.login(token);
+client.login(config.token);
 
 setStatus();
 
