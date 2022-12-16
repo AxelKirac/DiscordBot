@@ -10,7 +10,7 @@ const client = new Client({
 
 module.exports = {
 	data: new SlashCommandBuilder()
-	.setName('permananceaiyana')
+	.setName('permanenceaiyana')
 	.setDescription('Envoi une permanence pour la Dr. Aiyana Durazzo')
 	.addStringOption(option =>
 			option.setName('hopital')
