@@ -45,6 +45,6 @@ N'hésitez pas à prendre contact avec au ${numTel} par téléphone ou simple me
 **Disponible de : ${responseStart} à ${responseEnd}**
 			
 L'équipe du Gynecology Obstetrics & Pediatrics Services vous remercie pour votre confiance ! <:creche:1053264035124088882>
-https://i.imgur.com/QxQPj9c.png`})
+https://i.imgur.com/BzUTNsO.png`})
 	}
 };

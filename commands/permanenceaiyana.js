@@ -33,7 +33,7 @@ module.exports = {
 Hey !
 La docteur <@310889892802461696> est actuellement **disponible** à l'hôpital de **${hospitalAiyana}** dans le **${endroitAiyana}**!
                 
-**N'hésitez pas à prendre contact avec lui pour toute demande, récupérer votre prime ou réclamation !**
+**N'hésitez pas à prendre contact avec elle pour toute demande, récupérer votre prime ou réclamation !**
 https://i.imgur.com/CkPaizQ.mp4`})
 	}
 };
