@@ -40,7 +40,7 @@ module.exports = {
 Bonjour à tous et à toutes <@&1006604363646644274> !
 
 Le docteur ${interaction.user} est actuellement disponible pour garder vos enfants à la garderie.
-N'hésitez pas à prendre contact avec au ${numTel} par téléphone ou simple message !
+N'hésitez pas à prendre contact avec au 0523 par téléphone, simple message ou alors par mail sur la radio D !
 			
 **Disponible de : ${responseStart} à ${responseEnd}**
 			
