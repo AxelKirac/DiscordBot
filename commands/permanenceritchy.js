@@ -25,11 +25,12 @@ module.exports = {
 				.setMinLength(1)
 				.setMaxLength(15)),
 				async execute(interaction) {
+					await interaction.deferReply({ephemeral: true})
 					const hospitalRitchy = interaction.options.getString('hopital')
 					const endroitRitchy = interaction.options.getString('endroit')
-					await interaction.reply(
-			{	allowedMentions: {role:['1006604363646644274']},
-				content : `
+					interaction.editReply("Demande bien prise en compte")
+						 interaction.channel.send({ allowedMentions: {role:['1006604363646644274']},
+						 content : `
 Hey !
 Le docteur <@496663639349264415> est actuellement **disponible** à l'hôpital de **${hospitalRitchy}** dans le **${endroitRitchy}**!
                 

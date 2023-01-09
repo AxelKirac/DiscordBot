@@ -25,15 +25,17 @@ module.exports = {
 				.setMinLength(1)
 				.setMaxLength(15)),
 				async execute(interaction) {
+					await interaction.deferReply({ephemeral: true})
 					const hospitalAiyana = interaction.options.getString('hopital')
 					const endroitAiyana = interaction.options.getString('endroit')
-					await interaction.reply(
-			{	allowedMentions: {role:['1006604363646644274']},
-				content : `
+					interaction.editReply("Demande bien prise en compte")
+						 interaction.channel.send({ allowedMentions: {role:['1006604363646644274']},
+						content:`
 Hey !
 La docteur <@310889892802461696> est actuellement **disponible** à l'hôpital de **${hospitalAiyana}** dans le **${endroitAiyana}**!
                 
 **N'hésitez pas à prendre contact avec elle pour toute demande, récupérer votre prime ou réclamation !**
-https://i.imgur.com/CkPaizQ.mp4`})
+https://i.imgur.com/CkPaizQ.mp4`	}
+)
 	}
-};
+		}

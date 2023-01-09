@@ -18,10 +18,11 @@ module.exports = {
 			.setRequired(true)
 			.setMinLength(1)),
 				async execute(interaction) {
+					await interaction.deferReply({ephemeral: true})
 					const designerDirection = interaction.options.getString('name')
-					await interaction.reply(
-			{	allowedMentions: {users:true},
-			content : `Bonjour,\n\ ${designerDirection} répondra bientôt à votre demande. Merci de vous assurer d'avoir correctement rédigée celle-ci. **Les demandes liées à des réanimations** ou **des absences à des rendez-vous d'Evaluations Psychotechniques** ne seront pas prises en compte et **le ticket sera fermé**. \n\n**Bonne journée,**\n<@1010191277238784050>\n**Secrétaire du L.S.M.C.<:LSMC:915255404076883988> **` });
+					interaction.editReply("Demande bien prise en compte")
+						 interaction.channel.send({ allowedMentions: {users:true},
+						 content : `Bonjour,\n\ ${designerDirection} répondra bientôt à votre demande. Merci de vous assurer d'avoir correctement rédigée celle-ci. **Les demandes liées à des réanimations** ou **des absences à des rendez-vous d'Evaluations Psychotechniques** ne seront pas prises en compte et **le ticket sera fermé**. \n\n**Bonne journée,**\n<@1010191277238784050>\n**Secrétaire du L.S.M.C.<:LSMC:915255404076883988> **` });
 	}
 };
 

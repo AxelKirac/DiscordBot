@@ -31,16 +31,17 @@ module.exports = {
 						.setMinLength(3)
 						.setMaxLength(9)),
 				async execute(interaction) {
+					await interaction.deferReply({ephemeral: true})
 					const responseStart = interaction.options.getString('début')
 					const responseEnd = interaction.options.getString('fin')
 					const numTel = interaction.options.getString('téléphone')
-					await interaction.reply(
-			{	allowedMentions: {role:['1006604363646644274']},
-				content : `
+					interaction.editReply("Demande bien prise en compte")
+						 interaction.channel.send({ allowedMentions: {role:['1006604363646644274']},
+						content: `
 Bonjour à tous et à toutes <@&1006604363646644274> !
 
 Le docteur ${interaction.user} est actuellement disponible pour garder vos enfants à la garderie.
-N'hésitez pas à prendre contact avec au 0523 par téléphone, simple message ou alors par mail sur la radio D !
+N'hésitez pas à prendre contact avec au ${numTel} par téléphone, simple message ou alors par mail sur la radio D !
 			
 **Disponible de : ${responseStart} à ${responseEnd}**
 			
