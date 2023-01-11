@@ -29,7 +29,7 @@ module.exports = {
 					const hospitalJuan = interaction.options.getString('hopital')
 					const endroitJuan = interaction.options.getString('endroit')
 					interaction.editReply("Demande bien prise en compte")
-						 interaction.channel.send({ allowedMentions: {role:['1006604363646644274']},
+						 interaction.channel.send({ allowedMentions: {roles :['1006604363646644274']},
 					content : `
 Hey !
 Le docteur <@170557885376495616> est actuellement **disponible** à l'hôpital de **${hospitalJuan}** dans le **${endroitJuan}**!

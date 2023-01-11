@@ -36,7 +36,7 @@ module.exports = {
 					const responseEnd = interaction.options.getString('fin')
 					const numTel = interaction.options.getString('téléphone')
 					interaction.editReply("Demande bien prise en compte")
-						 interaction.channel.send({ allowedMentions: {role:['1006604363646644274']},
+						 interaction.channel.send({ allowedMentions: {roles :['1006604363646644274']},
 						content: `
 Bonjour à tous et à toutes <@&1006604363646644274> !
 

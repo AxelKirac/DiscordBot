@@ -7,7 +7,7 @@ module.exports = {
 	async execute(interaction) {
 		await interaction.deferReply({ephemeral: true})
 		interaction.editReply("Demande bien prise en compte")
-						 interaction.channel.send({ allowedMentions: {role:['983797860552302602']},
+						 interaction.channel.send({ allowedMentions: {roles :['983797860552302602']},
 						 content: "Bonjour,\n\nNous avons bien reçu votre demande de **consultation animalière**. Un membre du <@&983797860552302602> répondra bientôt à celle-ci.<:VS:992527985108336781>\n\nNe vous inquiétez pas, nos meilleurs vétérinaires sont sur le coup, **votre animal est entre de bonne main ! <a:gyro:914592380739526737>**\n\nBien à vous,\n<@1010191277238784050>\n**Secrétaire du L.S.M.C.<:LSMC:915255404076883988> **"});
 	}
 };
