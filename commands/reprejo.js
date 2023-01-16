@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require("discord.js");
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('reprejo')
-		.setDescription('Envoi une permanence pour la représentante du personnel Jo Liberty'),
+		.setDescription('Envoi une permanence pour le représentant du personnel Jo Liberty'),
 	async execute(interaction) {
 		await interaction.deferReply({ephemeral: true})
 		interaction.editReply("Demande bien prise en compte")
