@@ -15,11 +15,11 @@ client.login(config.token);
 setStatus();
 
 function setStatus() {
-    const botActivities = ["Fortinitti", "La babaji", "PPA Simulator", "Minecraft"];
+    const botActivities = ["les demande de réanimation", "les CoMeN On A lE PpA", "le nombre de code blanc"];
     client.on('ready', () => [
         setInterval(async () => {
             const randomStatus = botActivities[Math.floor(Math.random() * botActivities.length)];
-            client.user.setPresence({ activities: [{ name: `${randomStatus}`, type: ActivityType.Playing }] });
+            client.user.setPresence({ activities: [{ name: `${randomStatus}`, type: ActivityType.Watching }] });
         }, 15000)
     ]);
     module.exports = { setStatus };
