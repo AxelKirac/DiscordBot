@@ -35,6 +35,6 @@ Hey !
 Le docteur <@536231631938387978> est actuellement **disponible** à l'hôpital de **${hospitalThomas}** dans le **${endroitThomas}**!
                 
 **N'hésitez pas à prendre contact avec lui pour toute demande, récupérer votre prime ou réclamation !**
-https://i.imgur.com/R0ltMIA.mp4`})
+https://cdn.discordapp.com/attachments/1004187230023204974/1066314912332267520/gif_direction_12.gif`})
 	}
 };

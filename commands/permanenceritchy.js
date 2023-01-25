@@ -35,6 +35,6 @@ Hey !
 Le docteur <@496663639349264415> est actuellement **disponible** à l'hôpital de **${hospitalRitchy}** dans le **${endroitRitchy}**!
                 
 **N'hésitez pas à prendre contact avec lui pour toute demande, récupérer votre prime ou réclamation !**
-https://cdn.discordapp.com/attachments/1004187230023204974/1008768195689205861/Gif_ritchy_fini.gif`})
+https://cdn.discordapp.com/attachments/1004187230023204974/1066315109112217652/gif_direction_16.gif`})
 	}
 };

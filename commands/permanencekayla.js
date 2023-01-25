@@ -35,6 +35,6 @@ Hey !
 La docteur <@455801536413564940> est actuellement **disponible** à l'hôpital de **${hospitalKayla}** dans le **${endroitKayla}**!
                 
 **N'hésitez pas à prendre contact avec elle pour toute demande, récupérer votre prime ou réclamation !**
-https://i.imgur.com/Nv8pRcM.mp4`})
+https://cdn.discordapp.com/attachments/1004187230023204974/1066314966921134150/gif_direction_13.gif`})
 	}
 };

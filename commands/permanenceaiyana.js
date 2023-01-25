@@ -35,7 +35,7 @@ Hey !
 La docteur <@310889892802461696> est actuellement **disponible** à l'hôpital de **${hospitalAiyana}** dans le **${endroitAiyana}**!
                 
 **N'hésitez pas à prendre contact avec elle pour toute demande, récupérer votre prime ou réclamation !**
-https://i.imgur.com/CkPaizQ.mp4`	}
+https://cdn.discordapp.com/attachments/1004187230023204974/1066315063876669440/gif_direction_15.gif`	}
 )
 	}
 		}
