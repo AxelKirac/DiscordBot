@@ -1,4 +1,5 @@
 const fs = require('node:fs');
+const fs = require('fs');
 const path = require('node:path');
 const { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, ActivityType, Status, SlashCommandBuilder, Collection, Events } = require("discord.js");
 const config = require("./config.json")
@@ -87,39 +88,3 @@ client.on(Events.InteractionCreate, async interaction => {
 });
 
 //---------------------------------------------------------------------------------
-
-// Ajoutez une commande appelée "musique"
-client.on('message', message => {
-    // ...
-    if (message.content.startsWith('!musique')) {
-        // Récupérez le service de streaming
-        let streamingService = message.content.split(" ")[1];
-
-        // Récupérez la piste/playlist/liste de lecture à jouer
-        let track = message.content.split(" ").slice(2).join(" ");
-
-        // Jouez la piste/playlist/liste de lecture
-        PlayTrack(streamingService, track);
-    }
-});
-
-
-// Fonction pour jouer une piste/playlist/liste de lecture
-function PlayTrack(streamingService, track) {
-    // Récupérez la piste/playlist/liste de lecture
-    // à partir du service de streaming spécifié
-    let trackToPlay = streamingService.getTrack(track);
-
-    // Rejoignez le salon vocal
-    let voiceChannel = message.member.voice.channel;
-    voiceChannel.join().then(connection => {
-
-        // Jouez la piste/playlist/liste de lecture
-        connection.play(trackToPlay);
-    });
-}
-
-// Exporter la fonction PlayTrack()
-module.exports = {
-    PlayTrack: PlayTrack
-};
