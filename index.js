@@ -1,5 +1,4 @@
 const fs = require('node:fs');
-const fs = require('fs');
 const path = require('node:path');
 const { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, ActivityType, Status, SlashCommandBuilder, Collection, Events } = require("discord.js");
 const config = require("./config.json")
