@@ -24,8 +24,8 @@ module.exports = {
 						 interaction.channel.send({
 						 content : `
 Bonjour,
-${designerDirection} répondra bientôt à votre demande. 
-Merci de vous assurer d'avoir correctement rédigée celle-ci. 
+Merci de patienter encore quelques instants, ${designerDirection} répondra bientôt à votre demande. 
+Merci de vous assurer d'avoir correctement rédigée cette dernière. 
 **Les demandes liées à des réanimations** ou **des absences à des rendez-vous d'Evaluations Psychotechniques** ne seront pas prises en compte et **le ticket sera fermé**. 
 
 **Bonne journée,**
