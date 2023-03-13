@@ -34,7 +34,7 @@ Restant à votre disposition pour toutes questions,
                          
 Bien à vous,
 <@1010191277238784050>
-***Secrétaire du L.S.M.C. <:LSMC:915255404076883988>` });
+**Secrétaire du L.S.M.C. <:LSMC:915255404076883988>**` });
 	}
 };
 
