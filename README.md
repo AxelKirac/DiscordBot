@@ -1,7 +1,6 @@
 # Bot Discord (Sous discord.js)
 
-*Projet en cours, c'est un bot pour automatisé certains tâches redondante qu'il font au quotidien. (Comme des messages prédéfinis, de l'auto-réponse etc..)*
-
+_Projet en cours, c'est un bot pour automatisé certains tâches redondante qu'il font au quotidien. (Comme des messages prédéfinis, de l'auto-réponse etc..)_
 
 ## Etape à faire au démarrage :
 
@@ -9,7 +8,6 @@
 
 ### 2 - Lancer avec nodejs 'index.js' pour démarrer le bot (chargement long)
 
+##### \* _Si il manque les dépendances discord.js faire `npm i discord.js`._
 
-##### * *Si il manque les dépendances discord.js faire ```npm i discord.js```.*
-
-
+test
