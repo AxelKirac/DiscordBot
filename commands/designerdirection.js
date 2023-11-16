@@ -18,6 +18,7 @@ module.exports = {
 			.setRequired(true)
 			.setMinLength(1)),
 				async execute(interaction) {
+					try {
 					await interaction.deferReply({ephemeral: true})
 					const designerDirection = interaction.options.getString('name')
 					interaction.editReply("Demande bien prise en compte")
@@ -32,6 +33,12 @@ Merci de vous assurer d'avoir correctement rédigée cette dernière.
 <@1010191277238784050>
 **Secrétaire du L.S.M.C. <:LSMC:915255404076883988> **` });
 	}
+	catch (error) {
+		const channelId = "1010217082622857348";
+		const errorMessage = `Une erreur s'est produite ALED <@248517566530584577> à ${new Date().toLocaleString()} : ${error.message}`;
+		interaction.client.channels.cache.get(channelId).send(errorMessage);
+	}
+		}
 };
 
 

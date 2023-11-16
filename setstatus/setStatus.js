@@ -15,7 +15,7 @@ client.login(config.token);
 setStatus();
 
 function setStatus() {
-    const botActivities = ["les demande de réanimation", "les CoMeN On A lE PpA", "le nombre de code blanc"];
+    const botActivities = ["les demande de réanimation", "le nombre de code blanc"];
     client.on('ready', () => [
         setInterval(async () => {
             const randomStatus = botActivities[Math.floor(Math.random() * botActivities.length)];

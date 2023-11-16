@@ -31,6 +31,7 @@ module.exports = {
 						.setMinLength(3)
 						.setMaxLength(9)),
 				async execute(interaction) {
+					try {
 					await interaction.deferReply({ephemeral: true})
 					const responseStart = interaction.options.getString('début')
 					const responseEnd = interaction.options.getString('fin')
@@ -48,4 +49,9 @@ N'hésitez pas à prendre contact avec au ${numTel} par téléphone, simple mess
 L'équipe du Gynecology Obstetrics & Pediatrics Services vous remercie pour votre confiance ! <:creche:1053264035124088882>
 https://i.imgur.com/BzUTNsO.png`})
 	}
+	catch (error) {
+		const channelId = "1010217082622857348";
+		const errorMessage = `Une erreur s'est produite ALED <@248517566530584577> à ${new Date().toLocaleString()} : ${error.message}`;
+		interaction.client.channels.cache.get(channelId).send(errorMessage);
+	}}
 };

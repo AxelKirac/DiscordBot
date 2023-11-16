@@ -1,7 +1,5 @@
 const { Client, GatewayIntentBits, MessageFlags, MembershipScreeningFieldType } = require("discord.js");
-
 const config = require("../config.json");
-
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -11,191 +9,116 @@ const client = new Client({
 });
 
 client.login(config.token);
-
-troll();
-
-function troll() {
 client.on("messageCreate", message => {
-    if(message.author.bot) return;
+    if (message.author.bot) return;
     
+    const commands = {
+      "!women": {
+        roles: ["Haut-gradé", "Direction", "Staff"],
+        response: "https://tenor.com/view/women-hahaha-women-memes-haha-gif-24926576"
+      },
+      "!raslebol": {
+        roles: ["Haut-gradé", "Direction", "Staff"],
+        response: "https://tenor.com/view/axe-five-hatchet-warning-weapon-gif-18148135"
+      },
+      "!racroche": {
+        roles: ["Haut-gradé", "Direction"],
+        response: "https://tenor.com/view/disconnected-telephone-call-goodbye-disappointed-upset-gif-15716208"
+      },
+      "!flemme": {
+        roles: ["Haut-gradé", "Direction"],
+        response: "https://tenor.com/view/typing-working-nails-peter-griffin-keyboard-gif-23623906"
+      },
+      "!encouragement": {
+        roles: ["Haut-gradé", "Direction"],
+        response: "https://tenor.com/view/seeing-abd-batting-after-a-long-time-gif-trending-cricket-sports-gif-18495086"
+      },
+      "!crame": {
+        roles: ["Haut-gradé", "Direction"],
+        response: "https://tenor.com/view/flame-thrower-leonardo-dicaprio-lance-flamme-burn-burning-gif-21661296"
+      },
+      "!coincoin": {
+        roles: ["Haut-gradé", "Direction"],
+        response: "https://tenor.com/view/gravity-falls-duck-canard-coinspecteur-ducktective-gif-17037966"
+      },
+      "!coincoin": {
+        roles: ["Haut-gradé", "Direction"],
+        response: "https://tenor.com/view/gravity-falls-duck-canard-coinspecteur-ducktective-gif-17037966"
+      },
+      "!travail": {
+        roles: ["Haut-gradé", "Direction"],
+        response: "https://tenor.com/view/philippe-katerine-katerine-travailler-crever-bosser-gif-10490144"
+      },
+      "!ouémec": {
+        roles: ["Haut-gradé", "Direction"],
+        response: "https://tenor.com/view/zepeck-pouce-epoque-grands-freres-cousin-zepeck-gif-22606185"
+      },
+      "!choquée": {
+        roles: ["Haut-gradé", "Direction"],
+        response: "https://tenor.com/view/shocked-face-wide-eyes-bug-eyes-shocked-surprised-gif-17836791"
+      },
+      "!analebot": {
+        roles: ["Haut-gradé", "Direction"],
+        response: "Bonjour\n\nJ'ai beau être un assistant robotisé controlé par deux gros connard, sachez que si un jour on se croise dans la rue, je vous pête en deux."
+      },
+      "!redem": {
+        roles: ["Haut-gradé", "Direction"],
+        response: `Bonjour à vous,\n\nMes grands maîtres <@536231631938387978> et <@248517566530584577>, qui n'ont aucun complexe de supériorité m'ont redémarrée, merci à vous d'avoir attendu !`
+    },
+    "!tyler": {
+        roles: ["Haut-gradé", "Direction"],
+        response: `Bonjour, moi c'est Tyler.`
+    },
+    "!300iq": {
+        roles: ["Haut-gradé", "Direction"],
+        response: `https://tenor.com/view/brain-meme-gif-26221149`
+    },
+    "!gigachad": {
+        roles: ["Haut-gradé", "Direction"],
+        response: `https://tenor.com/view/gigachad-chad-gif-20773266`
+    },
+    "!ohhh": {
+        roles: ["Haut-gradé", "Direction"],
+        response: `https://tenor.com/view/ohhh-whoah-gif-14206432`
+    },
+    "!momohenni": {
+        roles: ["Haut-gradé", "Direction"],
+        response: `https://tenor.com/view/mohamed-henni-bloger-fan-de-om-fan-de-marseille-youtuber-gif-12597020`
+    },
+    "!monkey": {
+      roles: ["Haut-gradé", "Direction"],
+      response: `https://tenor.com/view/monkey-rizz-lightskin-stare-lightskin-monkey-lick-lips-monkey-stare-gif-27631236`
+  },
+    "!serviceetudiant" : {
+      roles: ["Haut-gradé", "Direction"],
+      response: `Bonjour à vous <@&1024038809387667578>,
+      
+
+Ci-dessous des messages de mentor seront posé afin que vous puissiez partir en service avec eux.
+Maintenant à toi de lui envoyé un mail privé pour pouvoir partir en service avec lui.
+Pour les mentors vous n'avez qu'a effectué la commande "/servicementorat" et de suivre les indications.
+      
+Bien à vous,
+<@1010191277238784050>
+Le Secrétaire Administratif du L.S.M.C. `
+    }
+}
+    const content = message.content.trim();
     
-    //!demanderea
-    if(message.content === "!demanderea" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!demanderea" && message.member.roles.cache.some(role => role.name === 'Direction') || message.content === "!demanderea" && message.member.roles.cache.some(role => role.name === 'Staff') )
-    {
-        message.channel.send("Bonjour,\n\nNous avons bien pris en compte votre demande de réanimation sur un Discord. **Nous vous envoyons tout de suite plein de petits bots** afin de venir vous sauver le plus rapidement possible.\nPar la voie terrestre, maritime, ou aérienne, ces derniers ont un champ d'intervention hors du commun, vous êtes entre de bonne main !\nPas de panique, ils sont gentils même s'ils peuvent donner des coups de jus ! \n\nSérieusement, que vouliez-vous que je vous réponde ? Si vous êtes blessés ou inconscient, vous n'avez rien à faire sur Discord ! **Attendez un médecin ou prenez l'Unité X.**\n\nEsperant vous avoir aidé à ma hauteur.\n\nBien à vous,\n<@1010191277238784050>\n**Secrétaire du L.S.M.C.<:LSMC:915255404076883988> **",
-        message.delete("demanderea")
-        )
+    if (content.startsWith("!")) {
+      const command = content.split(" ")[0];
+      if (commands.hasOwnProperty(command)) {
+        const { roles, response } = commands[command];
+        const hasPermission = roles.some(role => message.member.roles.cache.some(memberRole => memberRole.name === role));
+        
+        if (hasPermission) {
+          message.channel.send(response);
+          message.delete();
+        } else {
+          message.channel.send(`:flame: <@${message.author.id}> **Vous ne pouvez pas faire ça !**`);
+          message.delete();
+        }
+      }
     }
-   else if(message.content === "!demanderea" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!demanderea" && !message.member.roles.cache.some(role => role.name === 'Direction') || message.content === "!demanderea" && !message.member.roles.cache.some(role => role.name === 'Staff'))
-       {
-        return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-       message.delete("demanderea"))
-       };
-
-       //!women
-     if(message.content === "!women" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!women" && message.member.roles.cache.some(role => role.name === 'Direction') || message.content === "!women" && message.member.roles.cache.some(role => role.name === 'Staff') )
-     {
-        message.channel.send("https://tenor.com/view/women-hahaha-women-memes-haha-gif-24926576",
-        message.delete("women")
-         )
-     }
-    else if(message.content === "!women" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!women" && !message.member.roles.cache.some(role => role.name === 'Direction') || message.content === "!women" && !message.member.roles.cache.some(role => role.name === 'Staff'))
-        {
-            return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-        message.delete("women"))
-        };
-
-     //!raslebol
-     if(message.content === "!raslebol" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!raslebol" && message.member.roles.cache.some(role => role.name === 'Direction') || message.content === "!raslebol" && message.member.roles.cache.some(role => role.name === 'Staff') )
-     {
-        message.channel.send("http://ekladata.com/CNgfwrPlPfIwZ79UqNhkDfj2kAk.gif",
-        message.delete("raslebol")
-         )
-     }
-    else if(message.content === "!raslebol" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!raslebol" && !message.member.roles.cache.some(role => role.name === 'Direction') || message.content === "!raslebol" && !message.member.roles.cache.some(role => role.name === 'Staff'))
-        {
-            return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-        message.delete("raslebol"))
-        };
-
-     //!racroche
-     if(message.content === "!racroche" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!racroche" && message.member.roles.cache.some(role => role.name === 'Direction') )
-     {
-        message.channel.send("https://i.gifer.com/Jyfg.gif",
-        message.delete("racroche")
-         )
-     }
-    else if(message.content === "!racroche" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!racroche" && !message.member.roles.cache.some(role => role.name === 'Direction'))
-        {
-            return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-        message.delete("racroche"))
-        };
-
-     //!flemme
-     if(message.content === "!flemme" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!flemme" && message.member.roles.cache.some(role => role.name === 'Direction') || message.content === "!flemme" && message.member.roles.cache.some(role => role.name === 'Staff') )
-     {
-        message.channel.send("https://c.tenor.com/L2fNd_Z3aQMAAAAd/secretary-pretending-to-type.gif",
-        message.delete("flemme")
-         )
-     }
-    else if(message.content === "!flemme" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!flemme" && !message.member.roles.cache.some(role => role.name === 'Direction') || message.content === "!flemme" && !message.member.roles.cache.some(role => role.name === 'Staff'))
-        {
-        return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-        message.delete("flemme"))
-        };
-
-     //!encouragement
-     if(message.content === "!encouragement" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!encouragement" && message.member.roles.cache.some(role => role.name === 'Direction') )
-     {
-        message.channel.send("https://immo2.pro/images/wp-images/2014/06/contrat-sign%C3%A9.gif",
-        message.delete("encouragement")
-         )
-     }
-    else if(message.content === "!encouragement" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!encouragement" && !message.member.roles.cache.some(role => role.name === 'Direction'))
-        {
-        return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-        message.delete("encouragement"))
-        };
-
-
-    //!crame
-    if(message.content === "!crame" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!crame" && message.member.roles.cache.some(role => role.name === 'Direction') || message.content === "!crame" && message.member.roles.cache.some(role => role.name === 'Staff') )
-    {
-       message.channel.send("https://media1.tenor.com/images/df7c57eb034ae235076ce86fc3096b70/tenor.gif?itemid=10346886",
-       message.delete("crame")
-        )
-    }
-   else if(message.content === "!crame" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!crame" && !message.member.roles.cache.some(role => role.name === 'Direction') || message.content === "!crame" && !message.member.roles.cache.some(role => role.name === 'Staff'))
-       {
-       return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-       message.delete("crame"))
-       };
-
-    //Ana qui se fait ping
-    if(message.content === "<@1010191277238784050>")
-    {
-       message.reply("Bonjour,\nJe me présente, **Ana Tomie**, plus connue sous le nom de **Secrétaire du L.S.M.C.**,\nComment puis-je vous aider ?",
-        )
-    };
-
-    //!coincoin
-    if(message.content === "!coincoin" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!coincoin" && message.member.roles.cache.some(role => role.name === 'Direction') || message.content === "!coincoin" && message.member.roles.cache.some(role => role.name === 'Staff') )
-    {
-       message.channel.send("https://tenor.com/view/gravity-falls-duck-canard-coinspecteur-ducktective-gif-17037966",
-       message.delete("coincoin")
-        )
-    }
-   else if(message.content === "!coincoin" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!coincoin" && !message.member.roles.cache.some(role => role.name === 'Direction') || message.content === "!coincoin" && !message.member.roles.cache.some(role => role.name === 'Staff'))
-       {
-       return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-       message.delete("coincoin"))
-       };
-
-     //!travail
-     if(message.content === "!travail" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!travail" && message.member.roles.cache.some(role => role.name === 'Direction') )
-     {
-        message.channel.send("https://acegif.com/wp-content/uploads/gif-funny-work-63.gif",
-        message.delete("travail")
-         )
-     }
-    else if(message.content === "!travail" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!travail" && !message.member.roles.cache.some(role => role.name === 'Direction'))
-        {
-        return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-        message.delete("travail"))
-        };
-
-    //!sigma
-    if(message.content === "!sigma" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!sigma" && message.member.roles.cache.some(role => role.name === 'Direction') )
-    {
-       message.channel.send("https://tenor.com/view/pout-christian-bale-american-psycho-kissy-face-nod-gif-4860124",
-       message.delete("sigma")
-        )
-    }
-   else if(message.content === "!sigma" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!sigma" && !message.member.roles.cache.some(role => role.name === 'Direction'))
-       {
-       return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-       message.delete("sigma"))
-       };
-
-    //!ouémec
-    if(message.content === "!ouémec" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!ouémec" && message.member.roles.cache.some(role => role.name === 'Direction') )
-    {
-       message.channel.send("https://tenor.com/view/zepeck-pouce-epoque-grands-freres-cousin-zepeck-gif-22606185",
-       message.delete("ouémec")
-        )
-    }
-   else if(message.content === "!ouémec" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!ouémec" && !message.member.roles.cache.some(role => role.name === 'Direction'))
-       {
-       return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-       message.delete("ouémec"))
-       };
-
-    //!choquée
-    if(message.content === "!choquée" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!choquée" && message.member.roles.cache.some(role => role.name === 'Direction') )
-    {
-       message.channel.send("https://tenor.com/view/zepeck-pouce-epoque-grands-freres-cousin-zepeck-gif-22606185",
-       message.delete("choquée")
-        )
-    }
-   else if(message.content === "!choquée" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!choquée" && !message.member.roles.cache.some(role => role.name === 'Direction'))
-       {
-       return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-       message.delete("choquée"))
-       };
-
-    //!analebot
-    if(message.content === "!analebot" && message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!analebot" && message.member.roles.cache.some(role => role.name === 'Direction') )
-    {
-       message.channel.send("Bonjour\n\nJ'ai beau être un assistant robotisé controlé par deux gros connard, sachez que si un jour on se croise dans la rue, je vous pête en deux.",
-       message.delete("analebot")
-        )
-    }
-   else if(message.content === "!analebot" && !message.member.roles.cache.some(role => role.name === 'Haut-gradé') || message.content === "!analebot" && !message.member.roles.cache.some(role => role.name === 'Direction'))
-       {
-       return message.channel.send(`:flame: <@${user.id}> **Vous ne pouvez pas faire ça !**`,
-       message.delete("analebot"))
-       };
-
-       module.exports = { troll };
-
-    })};
+  });
+    

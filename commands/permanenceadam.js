@@ -25,17 +25,24 @@ module.exports = {
 			.setMinLength(1)
 			.setMaxLength(15)),
 			async execute(interaction) {
+				try {
 				await interaction.deferReply({ephemeral: true})
 				const hospitalAdam = interaction.options.getString('hopital')
 				const endroitAdam = interaction.options.getString('endroit')
 						 interaction.editReply("Demande bien prise en compte")
-						 interaction.channel.send({ allowedMentions: {roles :['1006604363646644274']},
+						 interaction.channel.send({ allowedMentions: {roles :['1006604363646644274','774370184328642590']},
 						content: `
 Hey !
 Le docteur <@248517566530584577> est actuellement **disponible** à l'hôpital de **${hospitalAdam}** dans le **${endroitAdam}**!
 									
 **N'hésitez pas à prendre contact avec lui pour toute demande, récupérer votre prime ou réclamation !**
-https://cdn.discordapp.com/attachments/1004187230023204974/1066315231392972810/gif_direction_18.gif`}
+https://cdn.discordapp.com/attachments/1004187230023204974/1066315231392972810/gif_direction_18.gif
+<@&774370184328642590>`}
 )
 	}
+	catch (error) {
+		const channelId = "1010217082622857348";
+		const errorMessage = `Une erreur s'est produite ALED <@248517566530584577> à ${new Date().toLocaleString()} : ${error.message}`;
+		interaction.client.channels.cache.get(channelId).send(errorMessage);
+	}}
 		}

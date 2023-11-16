@@ -39,49 +39,125 @@ client.login(config.token);
 //     });
 // }
 
-handleCmapPpa();
+const ROLES = {
+  PPA: '991454913605419069',
+  CMAP: '991455109764612126'
+};
 
-function handleCmapPpa() {
-    const ROLES = {
-        PPA: '991454913605419069',    //Ana Tomie > 991454913605419069    //Ana Thomas > 1043131912790749204
-        CMAP: '991455109764612126'    //Ana Tomie > 991455109764612126    //Ana Thomas > 1043138176291704962
-    };
-
-    client.on('interactionCreate', (interaction) => {
-        if (interaction.isButton()) {
-            const role = interaction.guild.roles.cache.get(
-                ROLES[interaction.customId.toUpperCase()]
-            );
-            // if (!role)
-            //     return interaction.reply({ content: 'Role not found', ephemeral: true });
-
-                const hasRole = interaction.member.roles.cache.has(role.id);
-
-                if(hasRole) {
-                    return interaction.member.roles
-                    .remove(role)
-                    .then((member) =>
-                    interaction.reply({
-                        content: `Bonjour ${member},\nLe rôle ${role} vous à bien été supprimé !\nMerci de votre confiance envers le L.S.M.C. ! <a:applaus:918553494615642112>`,
-                        ephemeral: true
-                    }))
-                }
-
-            return interaction.member.roles.add(role).then((member) => interaction.reply({
-                content: `Bonjour ${member},\nLe rôle ${role} vous a bien été ajouté.\nVous **serrez notifier lorsqu'une session sera proposée** par un médecin, afin de pouvoir vous inscrire. <a:gyro:914592380739526737> \nUne fois votre rendez-vous terminé, vous pourrez **recliquer sur ce même bouton afin de vous retirer le rôle**. <a:wash:994230658211786813> \nBonne journée !`,
-                ephemeral: true,
+function handleCmapButton() {
+  client.on('interactionCreate', (interaction) => {
+    if (interaction.isButton() && interaction.customId === 'CMAP') {
+      try {
+      const role = interaction.guild.roles.cache.get(ROLES.CMAP);
+      if (!role) {
+        return interaction.reply({
+          content: 'Role not found',
+          ephemeral: true
+        });
+      }
+      const hasRole = interaction.member.roles.cache.has(role.id);
+      if (hasRole) {
+        return interaction.member.roles
+          .remove(role)
+          .then((member) =>
+            interaction.reply({
+              content: `Bonjour ${member},\nLe rôle ${role} vous a bien été supprimé !\nMerci de votre confiance envers le L.S.M.C. ! <a:applaus:918553494615642112>`,
+              ephemeral: true
             })
-            )
-                .catch((err) => {
-                    console.log(err);
-                    interaction.reply({
-                        content: `Une erreur s'est produite. Le rôle ${role} n'a pas pus vous être ajouté, merci de bien vouloir réessayer.`,
-                        ephemeral: true,
-                    });
-                });
-        }
-        module.exports = { handleCmapPpa };
-    });
+          )
+          .catch((err) => {
+            console.log(err);
+            interaction.reply({
+              content: `Une erreur s'est produite. Le rôle ${role} n'a pas pu vous être supprimé, merci de bien vouloir réessayer.`,
+              ephemeral: true
+            });
+          });
+      } else {
+        return interaction.member.roles
+          .add(role)
+          .then((member) =>
+            interaction.reply({
+              content: `Bonjour ${member},\nLe rôle ${role} vous a bien été ajouté.\nVous serez notifié lorsqu'une session sera proposée par un médecin, afin de pouvoir vous inscrire. <a:gyro:914592380739526737> \nUne fois votre rendez-vous terminé, vous pourrez recliquer sur ce même bouton afin de vous retirer le rôle. <a:wash:994230658211786813> \nBonne journée !`,
+              ephemeral: true
+            })
+          )
+          .catch((err) => {
+            console.log(err);
+            interaction.reply({
+              content: `Une erreur s'est produite. Le rôle ${role} n'a pas pu vous être ajouté, merci de bien vouloir réessayer.`,
+              ephemeral: true
+            });
+          });
+      }
+    }
+    catch (error) {
+      const channelId = "1010217082622857348";
+      const errorMessage = `Une erreur s'est produite ALED <@248517566530584577> à ${new Date().toLocaleString()} : ${error.message}`;
+      interaction.client.channels.cache.get(channelId).send(errorMessage);
+  }}
+  });
 }
 
-//Test
+handleCmapButton();
+
+module.exports = { handleCmapButton };
+
+function handlePpaButton() {
+  client.on('interactionCreate', (interaction) => {
+    if (interaction.isButton() && interaction.customId === 'PPA') {
+      try {
+      const role = interaction.guild.roles.cache.get(ROLES.PPA);
+      if (!role) {
+        return interaction.reply({
+          content: 'Role not found',
+          ephemeral: true
+        });
+      }
+      const hasRole = interaction.member.roles.cache.has(role.id);
+      if (hasRole) {
+        return interaction.member.roles
+          .remove(role)
+          .then((member) =>
+            interaction.reply({
+              content: `Bonjour ${member},\nLe rôle ${role} vous a bien été supprimé !\nMerci de votre confiance envers le L.S.M.C. ! <a:applaus:918553494615642112>`,
+              ephemeral: true
+            })
+          )
+          .catch((err) => {
+            console.log(err);
+            interaction.reply({
+              content: `Une erreur s'est produite. Le rôle ${role} n'a pas pu vous être supprimé, merci de bien vouloir réessayer.`,
+              ephemeral: true
+            });
+          });
+      } else {
+        return interaction.member.roles
+          .add(role)
+          .then((member) =>
+            interaction.reply({
+              content: `Bonjour ${member},\nLe rôle ${role} vous a bien été ajouté.\nVous serez notifié lorsqu'une session sera proposée par un médecin, afin de pouvoir vous inscrire. <a:gyro:914592380739526737> \nUne fois votre rendez-vous terminé, vous pourrez recliquer sur ce même bouton afin de vous retirer le rôle. <a:wash:994230658211786813> \nBonne journée !`,
+              ephemeral: true
+            })
+          )
+          .catch((err) => {
+            console.log(err);
+            interaction.reply({
+              content: `Une erreur s'est produite. Le rôle ${role} n'a pas pu vous être ajouté, merci de bien vouloir réessayer.`,
+              ephemeral: true
+            });
+          });
+      }
+    }
+    catch (error) {
+      const channelId = "1010217082622857348";
+      const errorMessage = `Une erreur s'est produite ALED <@248517566530584577> à ${new Date().toLocaleString()} : ${error.message}`;
+      interaction.client.channels.cache.get(channelId).send(errorMessage);
+  }}
+  }
+  
+)}
+
+handlePpaButton();
+
+module.exports = { handlePpaButton };
+
