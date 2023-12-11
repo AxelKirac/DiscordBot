@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "combiendeprimeverser",
+  "private_key_id": "3956546dcb1df2de9b5c116b1baad192d90fa9b5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCmaAsCaknLlHEj\nFo8GDAFmJ54113CCPeTZZ5QzY8/S7ufdf4KK4JKNcBTTp07KCF9Cl6yC1pATVfDV\nk9E9xoz8YKi7EgKu4ieawvBDPGn08e03TYSDnFeXoSF3G2cXEQp995RzhCkb+U4L\nfrfUBIwksqwaGBMs+Y/KEfjktwc+AN49/NCFxkKuH0vKyK7+YFm8u29cxqlMxuH7\nXuC5qMlkTHcSaas/WN41/sqdf190ToLtJ4CEjbMVquowWg0hnGzskV8lMc/Q0Me7\n1lhg6cWjSCtt8it/N38k2cZd81cI4RsBBfvv3HSHHMirx/I/PT/2h7U2J3DY7yCp\neH1DvtUnAgMBAAECggEAHTkGPe1WekbeO3A5u7EeCceJVCE6Y9TkvH0hHIk5tOw5\nkb9TuHnJosb9EVI/VuFzgSlLpUpy0MJ14bvssfGNTsDWwMtf50BV/iqfsN8KKHbX\n1q9pRweMplconlcUmotmkUqKKmMaKQx19TTSqYwG5GbwLEDwFSTaaH0RfXDa97s8\nxcql94a2E6t73BdTxSRQESThGJorTpm7fN6rS/jMzLbjKY5htBfs36GIM4BERGMR\nCJZpT7fmTXufxb25/3+nRvJc5gzSQRcO0YkEjPLfVayl4+jogmmiw4VpBS7H49iy\nDlr17ux7LNif9n9GJMr/wysX/kvIqrxUH8pnOHiXAQKBgQDUpX+Z+wcAGYFggRms\np/FllG92RRzz5iLWziZ02V6cNe7t21TtUaQuXCY5OOnUgCB6zO0v4ynGY1ScbVId\ncwb1ECncbGSpWmskvI3rsZHw1BQvqnhyZJXHFhttyWY4/FaDVlmYfvWQoVbtNNOc\nkeZjC2kdsGxOoOEEQTaM0PJsgQKBgQDIVSvI/TJmrFaSkW/XPdpAZdh6yIl61sqc\noq9DtmGD1IfvTYM4KwRdHXq0SssnmZjV4rb4NbR9bSOsBYFvk61RdJRyJC1B6bM/\nBZqLpgkxwK2v5qWZn1U99bGLQotFAW3KEbobMmN5QU8l7t0ZJrJLIY1tbdiyMHhf\nAGQgkFeNpwKBgC8lKi83aovpG7gLp2eSLID68eNk21Bv25WISxpo/wLfKkPt9txO\n13m30HmrVpxYc9sGCCgv0xk6+I1d53DECezXUpCeL4skktCoRUbWLacZPgh7YQzr\npBFpo1cp6dIEkCG6SU74BvWz75PTvH7gEhYvd3SvorOkE39f/fomcTkBAoGAV159\n2AxE/O5QW1++bRr2ontIbFQlUUN33dQ9p8RUxw/bsQwXHFn2bz26FANCkqS0OSPF\nNH8HlmQQ2KcWCjlXr1yumREaA9MOb3/cJOdmvyIPHdXzhwosPPd4VQnSf2feH/CX\nP+E77NgE0sBYAO4VeBrL+Vuc1Cm7dYNQJ7uL06UCgYBshOTwhLgNnm6bOsGg1x92\nTo42SwChF2rAhPWV9DxB783WmX5brfFbl+f70vrwhtU99S1VdzNEka9iLcQd2M43\nywcfA9yym26whguOSc3dstoMP/XsjEwIVVW50pDcPM+08EfGv8G45VXuUTNJoP9G\nSQVX10R1ReJPa36mRVVm8Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "googlesheetdiscordlsmc@combiendeprimeverser.iam.gserviceaccount.com",
+  "client_id": "109016327010107373253",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/googlesheetdiscordlsmc%40combiendeprimeverser.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
