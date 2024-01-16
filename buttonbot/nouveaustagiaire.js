@@ -105,132 +105,83 @@ Bon courage à toi !`
                     //--------------------------------------------------------GOOGLE SHEETS
                     const { google } = require('googleapis');
 
-async function insertRow() {
-  try {
-    // Configurez l'authentification
-    const auth = new google.auth.GoogleAuth({
-      keyFile: './combiendeprimeverser-3956546dcb1d.json',
-      scopes: 'https://www.googleapis.com/auth/spreadsheets',
-    });
-
-    // Créez un client authentifié
-    const client2 = await auth.getClient();
-
-    const sheets = google.sheets({ version: 'v4', auth: client2 });
-
-    const spreadsheetId = '12LBizi5KXCnEmEMPu-ogiPeLxZcVmCmMLcPw-GGV5Ds';
-    const sheetName = 'Template Prime (Pas toucheww)';
-    const targetRowIndex = 150;
-
-    // Récupérer l'ID de la feuille
-    const { data: { sheets: sheetList } } = await sheets.spreadsheets.get({
-      spreadsheetId,
-    });
-
-    const sheet = sheetList.find(sheet => sheet.properties.title === sheetName);
-    const sheetId = sheet ? sheet.properties.sheetId : null;
-
-    if (sheetId) {
-      const fullName = interaction.fields.getTextInputValue('fullName');
-
-      const requests = [
-        {
-          pasteData: {
-            coordinate: {
-              sheetId,
-              rowIndex: targetRowIndex - 1,
-              columnIndex: 2,
-            },
-            data: fullName,
-            type: 'PASTE_NORMAL',
-            html: true,
-          },
-        },
-        {
-          copyPaste: {
-            source: {
-              sheetId,
-              startRowIndex: targetRowIndex - 2,
-              endRowIndex: targetRowIndex - 1,
-              startColumnIndex: 0,
-              endColumnIndex: 2,
-            },
-            destination: {
-              sheetId,
-              startRowIndex: targetRowIndex - 1,
-              endRowIndex: targetRowIndex,
-              startColumnIndex: 0,
-              endColumnIndex: 2,
-            },
-            pasteType: 'PASTE_NORMAL',
-          },
-        },
-        {
-          copyPaste: {
-            source: {
-              sheetId,
-              startRowIndex: targetRowIndex - 2,
-              endRowIndex: targetRowIndex - 1,
-              startColumnIndex: 3,
-              endColumnIndex: 26,
-            },
-            destination: {
-              sheetId,
-              startRowIndex: targetRowIndex - 1,
-              endRowIndex: targetRowIndex,
-              startColumnIndex: 3,
-              endColumnIndex: 26,
-            },
-            pasteType: 'PASTE_NORMAL',
-          },
-        },
-        {
-          repeatCell: {
-            range: {
-              sheetId,
-              startRowIndex: targetRowIndex - 1,
-              endRowIndex: targetRowIndex,
-              startColumnIndex: 2,
-              endColumnIndex: 3,
-            },
-            cell: {
-              userEnteredFormat: {
-                backgroundColor: {
-                  red: 0.95,
-                  green: 0.95,
-                  blue: 0.95,
-                },
-                textFormat: {
-                  fontFamily: 'Playfair Display',
-                  fontSize: 14,
-                  bold: true,
-                },
-                horizontalAlignment: 'CENTER',
-                verticalAlignment: 'MIDDLE',
-              },
-            },
-            fields: 'userEnteredFormat(backgroundColor,textFormat,horizontalAlignment,verticalAlignment)',
-          },
-        },
-      ];
-
-      const { data: response } = await sheets.spreadsheets.batchUpdate({
-        spreadsheetId,
-        resource: {
-          requests,
-        },
-      });
-
-      console.log('Nouvelle ligne créée avec succès à la ligne', targetRowIndex);
-    } else {
-      console.error('Feuille non trouvée :', sheetName);
-    }
-  } catch (error) {
-    console.error('Une erreur s\'est produite :', error);
-  }
-}
-
-insertRow();
+                    async function insertRow() {
+                      try {
+                        // Configurez l'authentification
+                        const auth = new google.auth.GoogleAuth({
+                          keyFile: './combiendeprimeverser-3956546dcb1d.json',
+                          scopes: 'https://www.googleapis.com/auth/spreadsheets',
+                        });
+                    
+                        // Créez un client authentifié
+                        const client2 = await auth.getClient();
+                    
+                        const sheets = google.sheets({ version: 'v4', auth: client2 });
+                    
+                        const spreadsheetId = '12LBizi5KXCnEmEMPu-ogiPeLxZcVmCmMLcPw-GGV5Ds';
+                        const sheetName = 'Template Prime (Pas toucheww)';
+                    
+                        // Récupérer l'ID de la feuille
+                        const { data: { sheets: sheetList } } = await sheets.spreadsheets.get({
+                          spreadsheetId,
+                        });
+                    
+                        const sheet = sheetList.find(sheet => sheet.properties.title === sheetName);
+                        const sheetId = sheet ? sheet.properties.sheetId : null;
+                    
+                        if (sheetId) {
+                          const fullName = interaction.fields.getTextInputValue('fullName');
+                    
+                          // Utilisez appendDimension pour ajouter une nouvelle ligne à la fin
+                          const requests = [
+                            {
+                              appendDimension: {
+                                sheetId,
+                                dimension: 'ROWS',
+                                length: 1,
+                              },
+                            },
+                            {
+                              pasteData: {
+                                coordinate: {
+                                  sheetId,
+                                  rowIndex: 125, // Mettez le numéro de la dernière ligne
+                                  columnIndex: 2,
+                                },
+                                data: fullName,
+                                type: 'PASTE_NORMAL',
+                                html: true,
+                              },
+                            },
+                            // Ajoutez d'autres demandes pour copier et formater les données selon vos besoins
+                          ];
+                    
+                          // Exécutez les demandes pour créer une nouvelle ligne
+                          const { data: response } = await sheets.spreadsheets.batchUpdate({
+                            spreadsheetId,
+                            resource: {
+                              requests,
+                            },
+                          });
+                    
+                          console.log('Nouvelle ligne créée avec succès');
+                        } else {
+                          console.error('Feuille non trouvée :', sheetName);
+                        }
+                      } catch (error) {
+                        console.error('Une erreur s\'est produite :', error);
+                      }
+                    }
+                    
+                    insertRow();
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
 
 //--------------------------------------------------------------------------------------
 
